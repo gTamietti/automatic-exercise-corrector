@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado da Submissão</title>
+</head>
+<body>
+    <h1>Resultado da Submissão</h1>
+    <p><strong>Exercício:</strong> {{ submission.exercicio.title }}</p>
+    <p><strong>Código Submetido:</strong></p>
+    <pre>{{ submission.code_file }}</pre>
+    <p><strong>Saída Gerada:</strong></p>
+    <pre>{{ submission.result }}</pre>
+    <a href="{% url 'detalhe_exercicio' exercicio_id=submission.exercicio.id %}">Voltar ao Exercício</a>
+</body>
+</html>
