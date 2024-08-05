@@ -1,16 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Lista de Exercicios</h1>
-    <ul>
-        {% for exercicio in exercicios %}
-            <li><a href="{% url 'detalhe_exercicio' exercicio_id=exercicio.id %}">{{ exercicio.title }}</a></li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+    <div class="header-content">
+        <h1>Lista de Exercicios</h1>
+    </div>
+    <div class="list-exercises">
+        <ul>
+            {% for exercicio in exercicios %}
+                <li><a href="{% url 'detalhe_exercicio' exercicio_id=exercicio.id %}">{{ exercicio.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>

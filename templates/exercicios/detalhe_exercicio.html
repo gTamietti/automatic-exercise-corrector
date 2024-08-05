@@ -1,12 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
     <title>{{ exercise.title }}</title>
 </head>
 <body>
-    <h1>{{ exercise.title }}</h1>
-    <p>{{ exercise.description }}</p>
-    
+    <div class="header-content">
+        <h1>{{ exercicio.title }}</h1>
+        <div class="exercise">
+            <h3>Resolva o seguinte problema: </h3>
+            <p>{{ exercicio.description }}</p>
+        </div>
+    </div>
+
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
