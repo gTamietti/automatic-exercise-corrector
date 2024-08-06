@@ -59,7 +59,7 @@ def detalhe_exercicio(request, exercicio_id):
             else:
                 submission.result = 'Exercício Incorreto'
             submission.save()
-            os.path(code_file_path)
+            os.remove(code_file_path)
             return redirect('submission_result', submission_id=submission.id)
 
         except Exception as e:

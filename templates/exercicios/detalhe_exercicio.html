@@ -8,18 +8,21 @@
     <title>{{ exercise.title }}</title>
 </head>
 <body>
-    <div class="header-content">
-        <h1>{{ exercicio.title }}</h1>
-        <div class="exercise">
-            <h3>Resolva o seguinte problema: </h3>
-            <p>{{ exercicio.description }}</p>
+    <div class="container">
+        <div class="header-content">
+            <h1>{{ exercicio.title }}</h1>
+            <div class="exercise">
+                <h3>Resolva o seguinte problema: </h3>
+                <p>{{ exercicio.description }}</p>
+            </div>
         </div>
-    </div>
 
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+        <a href="{% url 'lista_exercicios' %}">Voltar</a>
+    </div>
 </body>
 </html>

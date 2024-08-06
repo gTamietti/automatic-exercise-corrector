@@ -10,19 +10,27 @@ h1 {
     color: #333;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .header-content h1{
     overflow: hidden;
     background-color: #f1f1f1;
 }
 
-.header-content h3 {
-    
+.exercise {
     margin: 10px 0;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease;
+    width: fit-content;
 }
+
+
 
 .list-exercises {
     display: flex;
@@ -37,6 +45,8 @@ h1 {
 }
 
 .list-exercises li {
+    display: flex;
+    justify-content: center;
     background-color: #fff;
     margin: 10px 0;
     padding: 20px;
@@ -55,3 +65,40 @@ h1 {
     font-size: 18px;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: fit-content;
+}
+
+form button {
+    background-color: #189100;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.list-results {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
